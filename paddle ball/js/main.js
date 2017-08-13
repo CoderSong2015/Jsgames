@@ -47,22 +47,11 @@ var __main = function()
         if (paddle.collide(ball))
         {
             ball.speedy *= -1
-            /*
-            if (ball.speedx > 0 &&　!paddle.collidex(ball))
-            {
-                ball.speedx *= (1 - Math.abs())　　　　　　
-            }
-            if (ball.speedx < 0 && paddle.collidex(ball))
-            {
-                ball.speedx *= -1.5
-            } 
-             */
         }
         for(var i = 0; i < blocks.length; i++)
         {
             if (blocks[i].alive && blocks[i].collide(ball))
             {
-                log('相撞')
                 blocks[i].kill()
                 ball.speedy *= -1
                 score += 100
