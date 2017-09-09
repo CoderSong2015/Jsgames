@@ -9,7 +9,7 @@ var __main = function()
     
     var paulsed = true
     var blocks = loadlevel(imagePath, 1)
-
+    var score = 0
     window.addEventListener('keydown', function(event)
     {
         var k = event.key
@@ -65,6 +65,7 @@ var __main = function()
                 log('相撞')
                 blocks[i].kill()
                 ball.speedy *= -1
+                score += 100
             }
         }
     }
@@ -81,6 +82,7 @@ var __main = function()
             }
         }
         
+        game.contxt.fillText('分数:' + score, 10, 290)
     }
     
 }
